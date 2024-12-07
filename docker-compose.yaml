@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:10.3
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=aditya
+      - POSTGRES_PASSWORD=aditya123
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+volumes:
+  postgres:
